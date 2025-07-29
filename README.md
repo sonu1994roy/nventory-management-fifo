@@ -38,6 +38,29 @@ npm run dev
 
 
 
+# Note: Kafka integration is currently skipped due to the lack of free cloud resources to deploy Kafka topics without payment verification or account.
+- To enable Kafka, follow these steps:
+
+*Install Java JDK and download Kafka from *https://kafka.apache.org/
+
+Start Zookeeper:
+
+- C:\kafka>bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+Start Kafka server:
+
+C:\kafka>java -Dlog4j.configuration=file:config\log4j.properties -cp "libs/*;." kafka.Kafka config\server.properties
+
+*Uncomment Kafka-related code in kafka/consumer.js and *kafka/producerSimulator.js
+
+- Add a script in package.json:
+
+"worker": "node kafka/consumer.js"
+
+- In a new terminal, run:
+
+npm run worker
+
 ## 📌 Assignment Objective
 
 - Inventory data flows in real-time via Kafka events
