@@ -1,88 +1,70 @@
-# 📦 Inventory Management System (FIFO) – Real-Time Ingestion & Live Dashboard
+# Getting Started with Create React App
 
-A full-stack inventory management tool for small trading businesses with **FIFO-based costing**, **Kafka real-time ingestion**, and **live dashboard visualization**.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## 🚀 Live Demo
+In the project directory, you can run:
 
-| Platform   | URL (Replace after deployment)               |
-|------------|----------------------------------------------|
-| 🔐 Backend API | https://inventory-fifo-backend.onrender.com |
-| 📊 Frontend UI | https://inventory-dashboard.vercel.app     |
-| 👤 Login     | `username: admin` / `password: password123`     |
+### `npm start`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## 📌 Assignment Objective
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- Inventory data flows in real-time via Kafka events
-- FIFO logic determines cost per sale
-- Backend stores all purchase/sale transactions
-- Frontend dashboard visualizes stock + cost live
-- Kafka simulator built in (UI button)
+### `npm test`
 
----
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## ⚙️ Tech Stack
+### `npm run build`
 
-| Layer      | Stack                      |
-|------------|----------------------------|
-| Frontend   | React + Vite + Chart.js    |
-| Backend    | Express.js (Node.js)       |
-| DB         | PostgreSQL                 |
-| Messaging  | Kafka (via Confluent Cloud)|
-| Hosting    | Vercel (frontend) + Render (backend) |
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## 🔁 FIFO Logic – How Cost is Calculated
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-**FIFO (First-In First-Out)** means:
-- Sales consume the *oldest available inventory batches first*.
-- Cost is calculated by summing quantity × unit price from oldest batches.
+### `npm run eject`
 
-### 🔄 Example:
-| Batch | Quantity | Unit Price | Timestamp         |
-|-------|----------|------------|-------------------|
-| 1     | 50       | ₹100       | 2025-07-10 10:00AM |
-| 2     | 100      | ₹120       | 2025-07-12 12:00PM |
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If a sale of **70 units** happens:
-- 50 units are taken from batch 1 → ₹100 × 50 = ₹5,000  
-- 20 units are taken from batch 2 → ₹120 × 20 = ₹2,400  
-- ✅ **Total cost = ₹7,400**
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## 📊 Frontend Dashboard Features
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- 🔒 Basic Auth (username/password)
-- 📦 Inventory Overview:
-  - Product ID
-  - Current Quantity
-  - Total Inventory Cost
-  - Average Cost/Unit
-- 📜 Transaction Ledger:
-  - Time-series of Purchases/Sales
-  - FIFO cost calculation shown per sale
-- 📈 Chart Visuals:
-  - Bar charts for quantity & total cost
-- 🔁 Live Refresh: auto-updates every 3 seconds
-- 🧪 “Simulate Transaction” button triggers Kafka events in real-time
+## Learn More
 
----
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 📡 Kafka Integration
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- Topic: `inventory-events`
-- Event structure:
+### Code Splitting
 
-```json
-{
-  "product_id": "PRD001",
-  "event_type": "purchase" | "sale",
-  "quantity": 50,
-  "unit_price": 100.0, // only for purchase
-  "timestamp": "2025-07-12T10:00:00Z"
-}
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
