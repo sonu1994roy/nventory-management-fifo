@@ -8,7 +8,7 @@ A full-stack inventory management tool for small trading businesses with **FIFO-
 
 | Service       | Link                                                         |
 |---------------|--------------------------------------------------------------|
-| 🌐 Frontend UI | https://nventory-management-fifo-frontend.vercel.app        |
+| 🌐 Frontend UI | https://nventory-management-fifo-1.onrender.com       |
 | 🔐 Backend API | https://nventory-management-fifo.onrender.com               |
 | 👤 Login       | `username: admin` / `password: password123`                 |
 
