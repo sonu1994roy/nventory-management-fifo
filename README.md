@@ -4,15 +4,39 @@ A full-stack inventory management tool for small trading businesses with **FIFO-
 
 ---
 
-## 🚀 Live Demo
+## 🔗 Live URLs
 
-| Platform   | URL (Replace after deployment)               |
-|------------|----------------------------------------------|
-| 🔐 Backend API | https://inventory-fifo-backend.onrender.com |
-| 📊 Frontend UI | https://inventory-dashboard.vercel.app     |
-| 👤 Login     | `username: admin` / `password: password123`     |
+| Service       | Link                                                         |
+|---------------|--------------------------------------------------------------|
+| 🌐 Frontend UI | https://nventory-management-fifo-frontend.vercel.app        |
+| 🔐 Backend API | https://nventory-management-fifo.onrender.com               |
+| 👤 Login       | `username: admin` / `password: password123`                 |
 
 ---
+## 📦 Clone & Run (Frontend)
+
+```bash
+git clone --single-branch --branch frontend https://github.com/sonu1994roy/nventory-management-fifo.git frontend
+cd frontend
+npm install
+# Create a `.env` file:
+REACT_APP_API_BASE_URL=https://nventory-management-fifo.onrender.com/api
+npm run dev
+
+## 📦 Clone & Run (backend)
+git clone --single-branch --branch backend https://github.com/sonu1994roy/nventory-management-fifo.git backend
+cd backend
+npm install
+
+# Create a `.env` file:
+PORT=5000
+DOMAIN_URL=https://nventory-management-fifo.onrender.com
+DATABASE_URL=postgresql://fifo_db_ln7z_user:dD08vXThfmJeRMRRXd6Z83kwJ70LlwnH@dpg-d2463pfdiees73adia30-a.oregon-postgres.render.com/fifo_db_ln7z
+JWT_SECRET=yourSecretkey12345
+npm run dev
+
+
+
 
 ## 📌 Assignment Objective
 
@@ -31,8 +55,8 @@ A full-stack inventory management tool for small trading businesses with **FIFO-
 | Frontend   | React + Vite + Chart.js    |
 | Backend    | Express.js (Node.js)       |
 | DB         | PostgreSQL                 |
-| Messaging  | Kafka (via Confluent Cloud)|
-| Hosting    | Vercel (frontend) + Render (backend) |
+| Messaging  | Kafka (Simulated (no Kafka skipped and comment the code)) |
+| Hosting    |  Render|
 
 ---
 
