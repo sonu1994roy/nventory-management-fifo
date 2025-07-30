@@ -30,7 +30,7 @@ npm install
 
 # Create a `.env` file:
 PORT=5000
-DOMAIN_URL=https://nventory-management-fifo.onrender.com
+DOMAIN_URL=https://nventory-management-fifo-1.onrender.com 
 DATABASE_URL=postgresql://fifo_db_ln7z_user:dD08vXThfmJeRMRRXd6Z83kwJ70LlwnH@dpg-d2463pfdiees73adia30-a.oregon-postgres.render.com/fifo_db_ln7z
 JWT_SECRET=yourSecretkey12345
 npm run dev
@@ -75,7 +75,7 @@ npm run worker
 
 | Layer      | Stack                      |
 |------------|----------------------------|
-| Frontend   | React + Vite + Chart.js    |
+| Frontend   | React + Chart.js    |
 | Backend    | Express.js (Node.js)       |
 | DB         | PostgreSQL                 |
 | Messaging  | Kafka (Simulated (no Kafka skipped and comment the code)) |
